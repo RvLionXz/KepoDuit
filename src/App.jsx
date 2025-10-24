@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import ToolsPage from "./pages/ToolsPage";
 import CommunityPage from "./pages/CommunityPage";
@@ -40,6 +41,7 @@ function App() {
 
 	return (
 		<BrowserRouter>
+			<ScrollToTop />
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<HomePage financials={financials} />} />
